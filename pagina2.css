@@ -28,3 +28,26 @@ header{
   width: 100%;
   height: 80px;
 }
+
+.containter {
+position: absolute;
+}
+
+article {
+  display: flex;
+  position: relative;
+  height: 40%;
+  width: 40%;
+}
+
+article.genero h1{
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+article.genero img {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

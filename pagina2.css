@@ -29,8 +29,11 @@ header{
   height: 80px;
 }
 
-.containter {
+.container {
 position: absolute;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
 }
 
 article {

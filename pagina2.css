@@ -50,22 +50,29 @@ body{
 
   /*<--   Header   --> */
 
-.containter {
-position: absolute;
+.container {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+width: 100%;
 }
-
-article {
+div.imgcont{
   display: flex;
-  position: relative;
+  flex-direction: row;
+  justify-content: center;
+}
+article {
   height: 40%;
   width: 40%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
-
 article.genero h1{
   flex-wrap: nowrap;
   flex-direction: row;
+  text-align: center;
 }
-
 article.genero img {
   position: relative;
   display: flex;

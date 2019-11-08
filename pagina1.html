@@ -15,23 +15,87 @@
 <div class="todo">
   <!--   Header   -->
       <header>
-            <nav>
-              <div class="buscador">
-                <input type="search" placeholder="Buscar..." name="" value="">
-              </div>
-                <ul class="ul-menu">
-                    <li class="li-menu"><a class="a-menu" href=pagina1.html>Home</a></li>
-                    <li class="li-menu"><a class="a-menu" href=pagina2.html>Series</a></li>
-                    <li class="li-menu"><a class="a-menu" href=pagina3.html>Generos</a></li>
-                    <li class="li-menu"><a class="a-menu" href=pagina4.html>Contacto</a></li>
-                </ul>
-            </nav>
+        <nav class="uk-navbar-container navMia" uk-navbar>
+          <div class="buscador">
+            <form class="uk-search uk-search-default">
+              <span uk-search-icon></span>
+              <input class="uk-search-input buscar" type="search" placeholder="Buscar...">
+            </form>
+          </div>
+          <div class="uk-navbar-right">
+
+            <ul class="uk-navbar-nav">
+              <li class="uk-active li-menu"><a class="a-menu" href=pagina1.html>Home</a></li>
+              <li><a class="a-menu li-menu" href=pagina2.html>Generos</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li><a class="a-menu li-menu" href=pagina3.html>Series</a></li>
+            </ul>
+
+    </div>
+</nav>
         </header>
 
   <!-- Header -->
-<p>Hola esta es mi web</p>
 
+<p>Peliculas mas vistas</p>
 
+ <!-- Carrousel Mas Vistas -->
+ <div class="uk-position-relative uk-visible-toggle uk-light div-CarrouselMasVistos" tabindex="-1" uk-slider>
+
+     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+         <li>
+             <img src="C:\Users\ian_j\OneDrive\Documentos\UDESA\SEMESTRE 2\Programación 1\Trabajo Integrador\ProyectoFINAL\imagenes\testing.jpg" alt="">
+             <div class="uk-position-center uk-panel"><h1>1</h1></div>
+         </li>
+     </ul>
+
+     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+ </div>
+ <!-- Carrousel Mas Vistas -->
+
+<p>Peliculas Destacadas</p>
+
+ <!-- Carrousel Destacados -->
+ <div class="uk-position-relative uk-visible-toggle uk-light div-CarrouselDestacads" tabindex="-1" uk-slider>
+
+     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+         <li>
+             <img src="C:\Users\ian_j\OneDrive\Documentos\UDESA\SEMESTRE 2\Programación 1\Trabajo Integrador\ProyectoFINAL\imagenes\testing.jpg" alt="">
+             <div class="uk-position-center uk-panel"><h1>1</h1></div>
+         </li>
+     </ul>
+
+     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+ </div>
+ <!-- Carrousel Destacados -->
+
+<p>Generos</p>
+
+ <!-- Carrousel Generos -->
+ <div class="uk-position-relative uk-visible-toggle uk-light div-CarrouselGeneros" tabindex="-1" uk-slider>
+
+     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+         <li>
+             <img src="C:\Users\ian_j\OneDrive\Documentos\UDESA\SEMESTRE 2\Programación 1\Trabajo Integrador\ProyectoFINAL\imagenes\testing.jpg" alt="">
+             <div class="uk-position-center uk-panel"><h1>1</h1></div>
+         </li>
+     </ul>
+
+     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+ </div>
+ <!-- Carrousel Generos -->
 
 </div>
 

@@ -15,22 +15,35 @@
     <div class="todo">
       <!--   Header   -->
           <header>
-                <nav>
-                  <div class="buscador">
-                    <input type="search" placeholder="Buscar..." name="" value="">
-                  </div>
-                    <ul class="ul-menu">
-                        <li class="li-menu"><a class="a-menu" href=pagina1.html>Home</a></li>
-                        <li class="li-menu"><a class="a-menu" href=pagina2.html>Series</a></li>
-                        <li class="li-menu"><a class="a-menu" href=pagina3.html>Generos</a></li>
-                        <li class="li-menu"><a class="a-menu" href=pagina4.html>Contacto</a></li>
-                    </ul>
-                </nav>
+            <nav class="uk-navbar-container navMia" uk-navbar>
+              <div class="buscador">
+                <form class="uk-search uk-search-default">
+                  <span uk-search-icon></span>
+                  <input class="uk-search-input buscar" type="search" placeholder="Buscar...">
+                </form>
+              </div>
+              <div class="uk-navbar-right">
+
+                <ul class="uk-navbar-nav">
+                  <li class="uk-active li-menu"><a class="a-menu" href=pagina1.html>Home</a></li>
+                  <li><a class="a-menu li-menu" href=pagina2.html>Generos</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                  </li>
+                  <li><a class="a-menu li-menu" href=pagina3.html>Series</a></li>
+                </ul>
+
+        </div>
+    </nav>
             </header>
 
       <!-- Header -->
 
-<!--Header-->
+      
 <!--Listado generos con img-->
 <div class="container">
 

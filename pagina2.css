@@ -48,15 +48,14 @@ body{
   /*<--   Header   --> */
 
 .container {
-position: absolute;
-flex-direction: column;
+display: flex;
+flex-direction: row;
 flex-wrap: wrap;
 width: 100%;
 }
 
 article {
-  display: flex;
-  position: relative;
+
   height: 40%;
   width: 40%;
 }
@@ -64,6 +63,7 @@ article {
 article.genero h1{
   flex-wrap: nowrap;
   flex-direction: row;
+  text-align: center;
 }
 
 article.genero img {
@@ -71,4 +71,9 @@ article.genero img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+}
+div.imgcont{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

@@ -51,6 +51,18 @@ p#overview{
   color: black;
 }
 
+p#puntaje{
+  color: black;
+}
+
+#id-progressbar{
+  background-color: black;
+}
+.barra{
+  background-color: black;
+  border-color: black;
+}
+
 h2{
   text-align: center;
 }

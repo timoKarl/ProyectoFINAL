@@ -30,6 +30,10 @@ window.onload = ()=>{
     document.querySelector('#idioma').innerHTML += idiomaOriginal
     var sinopsis = data.overview
     document.querySelector('#overview').innerHTML += sinopsis
+    var mas = data.homepage
+    document.querySelector('#leerMas').innerHTML += '<a class="uk-button uk-button-text" href='+mas+'>Mas</a>'
+    var puntaje = data.vote_average
+    document.querySelector('#puntaje').innerHTML += puntaje
 })
 
 

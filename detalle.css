@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body{
+  font-family: russo One;
+  background-color: #f8f8f8;
+  width: 100%;
+  }
+  div.todo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+/*<--   Header   --> */
+
+header nav div.buscador{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+/*<--   Header   --> */
+div.div1{
+  align-items: flex-start;
+  width: 33.3%;
+}
+
+article.art{
+  align-items: flex-end;
+  width: 66.6%
+}
+
+p#generos{
+  color: black;
+}
+
+p#generos a{
+  color: black;
+}
+
+p#generos a.hover{
+  color: grey;
+}
+
+p#idioma{
+  color: black;
+}
+
+p#overview{
+  color: black;
+}
+
+h2{
+  text-align: center;
+}
+
+div.uk-first-column{
+  width: 100%;
+}
+
+.uk-article{
+  padding-left: 25px;
+}
+
+#div1 img.img{
+}

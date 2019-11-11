@@ -3,6 +3,7 @@ window.onload = function(){
 fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())
 .then(data => {
+  console.log(data.results);
   var populares = data.results;
   var prepath = "https://image.tmdb.org/t/p/original"
   var ulpopulares = document.getElementById("populares");
@@ -11,7 +12,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
    var nombre = populares[i].name
    var path = populares[i].poster_path
    var overview = populares[i].overview.substring(0,100)
-  lipopulares += '<li>'
+  lipopulares += '<a href="detalle.html?id='+ populares[i].id +'"><li>'
   lipopulares +=     '<div class="uk-card uk-card-default ">'
   lipopulares +=         '<div class="uk-card-media-top">'
   lipopulares +=             '<img class="populares" src='+ prepath + path +' alt="">'
@@ -21,7 +22,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
   lipopulares +=             '<p>'+ overview + '  ' +'</p>'
   lipopulares +=         '</div>'
   lipopulares +=     '</div>'
-  lipopulares += '</li>'
+  lipopulares += '</li></a>'
     ulpopulares.innerHTML += lipopulares;
 }
 })

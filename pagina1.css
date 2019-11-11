@@ -2,11 +2,14 @@
 
 body{
   font-family: russo One;
-  background-color: grey;
+  background-color: #f8f8f8;
   width: 100%;
 }
 
 /*<--   Header   --> */
+.uk-navbar{
+  background-color: grey;
+}
 
 header nav div.buscador{
   width: 30%;

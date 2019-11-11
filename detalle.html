@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+<link rel="stylesheet" href="detalle.css">
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+<script src="detalle.js"></script>
+  </head>
+  <body>
+    <!--   Header   -->
+        <header>
+          <nav class="uk-navbar-container navMia" uk-navbar>
+            <div class="buscador">
+              <form class="uk-search uk-search-default">
+                <span uk-search-icon></span>
+                <input class="uk-search-input buscar" type="search" placeholder="Buscar...">
+              </form>
+            </div>
+            <div class="uk-navbar-right">
+
+              <ul class="uk-navbar-nav">
+                <li class="uk-active li-menu"><a class="a-menu" href=pagina1.html>Home</a></li>
+                <li><a class="a-menu li-menu" href=pagina2.html>Generos</a>
+                  <div class="uk-navbar-dropdown">
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li><a href="#">Item</a></li>
+                          <li><a href="#">Item</a></li>
+                      </ul>
+                  </div>
+                </li>
+                <li><a class="a-menu li-menu" href=pagina3.html>Series</a></li>
+              </ul>
+
+      </div>
+  </nav>
+          </header>
+
+    <!-- Header -->
+<div class="todo">
+<div class="uk-child-width-1-2@m div1" uk-grid>
+    <div>
+        <div id="div1" class="uk-inline">
+
+        </div>
+    </div>
+</div>
+
+<article class="uk-article art">
+
+    <h1 id="titulo" class="uk-article-title">Titulo</h1>
+
+    <p id="generos" class="uk-article-meta">Generos: </p>
+    <p id="idioma" class="uk-article-meta">Idioma original: </p>
+
+    <p id="overview" class="uk-text-lead">Sinopsis: </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div class="uk-grid-small uk-child-width-auto" uk-grid>
+        <div>
+            <a class="uk-button uk-button-text" href="#">Read more</a>
+        </div>
+        <div>
+            <a class="uk-button uk-button-text" href="#">5 Comments</a>
+        </div>
+    </div>
+
+</article>
+
+</div>
+
+
+  </body>
+</html>

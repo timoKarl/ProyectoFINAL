@@ -18,5 +18,15 @@ header nav div.buscador{
 /*<--   Header   --> */
 
 p{
-  color: white;
+  color: black;
+  font-family: "times new roman";
+  font-size: 12px;
+}
+
+.populares{
+  width: 500px
+}
+
+.uk-card-body{
+  padding: 5px;
 }

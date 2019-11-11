@@ -4,6 +4,9 @@ body{
   font-family: russo One;}
 
   /*<--   Header   --> */
+  .uk-navbar{
+    background-color: grey;
+  }
 
   header nav div.buscador{
     width: 30%;

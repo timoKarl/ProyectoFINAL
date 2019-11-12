@@ -70,8 +70,8 @@ var videoNombre = ""
 var videoLink = ""
 for (var i = 0; i < videoResults.length; i++) {
   videoNombre = videoResults[i].name
-  videoLink = videoResults[i].link
-  document.querySelector('#videosTodos').innerHTML += '<a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle><p id="videoNombre">'+ videoNombre +'</p></a><div id="modal-media-youtube" class="uk-flex-top" uk-modal><div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical"><button class="uk-modal-close-outside" type="button" uk-close></button><div id="videos"><iframe src="https://www.youtube.com/watch?v='+ videoLink +'" width="500" height="281" frameborder="0" uk-video></iframe></div></div></div>'
+  videoLink = videoResults[i].key
+  document.querySelector('#videosTodos').innerHTML += '<a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle><p id="videoNombre">'+ videoNombre +'</p></a><div id="modal-media-youtube" class="uk-flex-top" uk-modal><div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical"><button class="uk-modal-close-outside" type="button" uk-close></button><div id="videos"><iframe class="SameSite" src="https://www.youtube.com/watch?v='+ videoLink +'" width="500" height="281" frameborder="0" uk-video></iframe></div></div></div>'
 }
 })
 

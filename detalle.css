@@ -119,4 +119,14 @@ width: 100%;
   text-decoration: none;
 }
 
+div#articleArriba{
+  display: flex;
+  flex-direction: row;  
+}
+
+div#videosTodos{
+  display: flex;
+  flex-direction: column;
+}
+
 /*<--   Footer   --> */

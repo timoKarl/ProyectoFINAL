@@ -29,6 +29,11 @@ header nav div.buscador{
 display: flex;
 align-items: center;
 }
+
+.signup{
+  margin-top: 23px;
+  margin-right: 15px;
+}
 /*<--   Header   --> */
 
 

@@ -1,0 +1,32 @@
+<li class="signup li.menu">
+  <div class="uk-button-group">
+<button class="uk-button uk-button-default">Registrarse</button>
+<div uk-dropdown="mode: click; boundary: ! .uk-button-group; boundary-align: true;">
+<ul class="uk-nav uk-dropdown-nav">
+<!-- Registro -->
+<FORM id="registro" name=form action="TU_PAGINA_WEB.HTML">
+
+<P>Usuario:    <INPUT type=text name=login></p>
+<P>Contraseña: <INPUT type=password name=password></p>
+<INPUT onclick=registro() type=button value=registro>
+
+</FORM>
+<!-- Registro -->
+</ul>
+</div>
+<div class="uk-inline">
+<button class="uk-button uk-button-default" type="button">Entrar</button>
+<div uk-dropdown="mode: click; boundary: ! .uk-button-group; boundary-align: true;">
+<ul class="uk-nav uk-dropdown-nav">
+<!-- Log in -->
+<FORM name=form action="TU_PAGINA_WEB.HTML">
+
+<P>Usuario:    <INPUT type=text name=login>
+<P>Contraseña: <INPUT type=password name=password>
+<INPUT onclick=go() type=button value=Acceder>
+
+</FORM>
+<!-- Log in -->
+</ul>
+</div>
+</li>

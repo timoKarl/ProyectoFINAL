@@ -33,35 +33,40 @@
                     </ul>
                 </div>
               </li>
-              <li class="li-menu"><a class="a-menu li-menu" href=pagina3.html>Series</a></li>
-              <li>
-                <div class="uk-button-group">
-    <button class="uk-button uk-button-default"></button>
-    <div class="uk-inline">
-
-        <!-- The button toggling the dropdown -->
-        <button class="uk-button uk-button-default" type="button"></button>
-        <div uk-dropdown="mode: click; boundary: ! .uk-button-group; boundary-align: true;"></div>
-
-    </div>
-</div>
-              </li>
-            </ul>
-
+              <li class="li-menu"><a class="a-menu li-menu" href=pagina3.html>Favoritos</a></li>
+      </ul>
     </div>
 </nav>
         </header>
 
   <!-- Header -->
+
   <!-- Log in -->
-<FORM name=form action="TU_PAGINA_WEB.HTML">
 
-<P>Usuario:    <INPUT type=text name=login>
-<P>Contraseña: <INPUT type=password name=password>
-<INPUT onclick=go() type=button value=Acceder>
+  <form name="login">
+       <table width="200" border="0">
+         <tr>
+           <th scope="row"><h2>Usuario</h2></th>
+           <td><span class="cnt">
+             <input name="usuario" type="text" class="Input" value="" size="20" />
+           </span></td>
+         </tr>
+         <tr>
+           <th height="33" scope="row"><h2>Clave</h2></th>
+           <td><span class="cnt">
+             <input name="password" type="password" class="Input" value="" size="20" />
+           </span></td>
+           <td><span class="cnt">
+             <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/>
+           </span></td>
+         </tr>
+         <tr>
+           <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th>
+         </tr>
+       </table>
+  </form>
 
-</FORM>
-<!-- Log in -->
+  <!-- Log in -->
 
 <h2>Populares</h2>
 

@@ -1,4 +1,20 @@
 window.onload = function(){
+
+  function Login(){
+  var done=0;
+  var usuario=document.login.usuario.value;
+  var password=document.login.password.value;
+  if (usuario=="USUARIO1" && password=="CONTRASEÑA1") {
+  window.localsStorage="TU_PAGINA_WEB.HTML";
+  }
+  if (usuario=="USUARIO2" && password=="CONTRASEÑA2") {
+  window.localStorage="TU_PAGINA_WEB.HTML";
+  }
+  if (usuario=="" && password=="") {
+  window.localStorage="errorpopup.html";
+  }
+  }
+
 //Header
 fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
 .then(res => res.json())
@@ -12,6 +28,16 @@ for (var i = 0; i < generos.length; i++) {
 }
   })
 //header
+//Registro
+function registro(){
+if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){
+        document.form.submit();
+    }
+    else{
+         alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
+    }
+}
+//Registro
 //log in
 function go(){
 if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){

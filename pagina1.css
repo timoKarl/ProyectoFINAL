@@ -18,7 +18,19 @@ header nav div.buscador{
   justify-content: flex-start;
   margin-left: 20px;
 }
+.login{
+  display: flex;
+  align-items: center;
+  margin-top: 29px;
+  margin-right: 15px;
+}
+
+.li-menu{
+display: flex;
+align-items: center;
+}
 /*<--   Header   --> */
+
 
 p{
   color: black;
@@ -33,6 +45,8 @@ p{
 .uk-card-body{
   padding: 5px;
 }
+
+/*<--   Footer   --> */
 footer{
   display: flex;
   flex-direction: row;
@@ -55,3 +69,5 @@ p.firma{
 .logoa:hover{
   text-decoration: none;
 }
+
+/*<--   Footer   --> */

@@ -14,7 +14,7 @@ for (var i = 0; i < generos.length; i++) {
 //header
 
 //populares
-fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
+fetch("https://api.themoviedb.org/3/discover/tv?api_key=f33095cc07bd4e913c0e2fdfc606109c&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=18&include_null_first_air_dates=false")
 .then(res => res.json())
 .then(data => {
   console.log(data.results);

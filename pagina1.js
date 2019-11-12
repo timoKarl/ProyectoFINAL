@@ -27,18 +27,19 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
    var path = populares[i].poster_path
    var overview = populares[i].overview.substring(0,100)
    var valoracion = populares[i].vote_average
-  lipopulares += '<a href="detalle.html?id='+ populares[i].id +'"><li>'
-  lipopulares +=     '<div class="uk-card uk-card-default ">'
-  lipopulares +=         '<div class="uk-card-media-top">'
-  lipopulares +=             '<img class="populares" src='+ prepath + path +' alt="">'
-  lipopulares +=         '</div>'
-  lipopulares +=         '<div class="uk-card-body">'
-  lipopulares +=             '<h3 class="uk-card-title">'+  nombre +'</h3>'
-  lipopulares +=             '<p>'+ overview + '...' +'</p>'
-  lipopulares +=             '<p>Valoracion: '+ valoracion +'</p>'
-  lipopulares +=         '</div>'
-  lipopulares +=     '</div>'
-  lipopulares += '</li></a>'
+    lipopulares = '<a href="detalle.html?id='+ populares[i].id +'"><li>'
+    lipopulares +=     '<div class="uk-card uk-card-default ">'
+    lipopulares +=         '<div class="uk-card-media-top">'
+    lipopulares +=             '<img class="populares" src='+ prepath + path +' alt="">'
+    lipopulares +=         '</div>'
+    lipopulares +=         '<div class="uk-card-body">'
+    lipopulares +=             '<h3 class="uk-card-title">'+  nombre +'</h3>'
+    lipopulares +=             '<p>'+ overview + '...' +'</p>'
+    lipopulares +=             '<p>Valoracion: '+ valoracion +'</p>'
+    lipopulares +=         '</div>'
+    lipopulares +=     '</div>'
+    lipopulares += '</li></a>';
+    console.log(lipopulares);
     ulpopulares.innerHTML += lipopulares;
 }
 })
@@ -58,7 +59,7 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=87b4351691f0835cf822a9a
    var path = valoradas[i].poster_path
    var overview = valoradas[i].overview.substring(0,100)
    var valoracion = valoradas[i].vote_average
-  livaloradas += '<a href="detalle.html?id='+ valoradas[i].id +'"><li>'
+  livaloradas = '<a href="detalle.html?id='+ valoradas[i].id +'"><li>'
   livaloradas +=     '<div class="uk-card uk-card-default ">'
   livaloradas +=         '<div class="uk-card-media-top">'
   livaloradas +=             '<img class="valoradas" src='+ prepath + path +' alt="">'
@@ -89,7 +90,7 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=87b4351691f0835cf822
    var path = aire[i].poster_path
    var overview = aire[i].overview.substring(0,100)
    var valoracion = aire[i].vote_average
-  liaire += '<a href="detalle.html?id='+ aire[i].id +'"><li>'
+  liaire  = '<a href="detalle.html?id='+ aire[i].id +'"><li>'
   liaire +=     '<div class="uk-card uk-card-default ">'
   liaire +=         '<div class="uk-card-media-top">'
   liaire +=             '<img class="aire" src='+ prepath + path +' alt="">'

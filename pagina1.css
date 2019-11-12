@@ -33,3 +33,25 @@ p{
 .uk-card-body{
   padding: 5px;
 }
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+img.logo{
+  max-width: 50px;
+  display: flex;
+  margin-right: 10px;
+  justify-content: flex-start;
+}
+
+p.firma{
+  color: black;
+  justify-content: flex-end;
+  font: "times new roman";
+  text-decoration: none;
+}
+
+.logoa:hover{
+  text-decoration: none;
+}

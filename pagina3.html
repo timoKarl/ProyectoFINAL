@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="pagina3.css">
+    <title>Listado por generos</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+    <div class="todo">
+      <!--   Header   -->
+          <header>
+            <nav class="uk-navbar-container navMia" uk-navbar>
+              <div class="buscador">
+                <form class="uk-search uk-search-default">
+                  <span uk-search-icon></span>
+                  <input class="uk-search-input buscar" type="search" placeholder="Buscar...">
+                </form>
+              </div>
+              <div class="uk-navbar-right">
+
+                <ul class="uk-navbar-nav">
+                  <li class="uk-active li-menu"><a class="a-menu" href=pagina1.html>Home</a></li>
+                  <li><a class="a-menu li-menu" href=pagina2.html>Generos</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul id="listaGeneros" class="uk-nav uk-navbar-dropdown-nav">
+
+                        </ul>
+                    </div>
+                  </li>
+                  <li><a class="a-menu li-menu" href=pagina3.html>Series</a></li>
+                </ul>
+
+        </div>
+    </nav>
+            </header>
+
+
+            <h2>Genero</h2>
+
+             <!-- Carrousel populares -->
+             <div uk-slider="center: true">
+
+                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                     <ul id="genero" class="uk-slider-items uk-child-width-1-2@s uk-grid populares">
+
+                     </ul>
+
+                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+                 </div>
+
+                 <!-- <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
+
+             </div>
+             <!-- Carrousel populares -->
+      <script type="text/javascript" src="pagina3.js"></script>
+  </body>
+</html>

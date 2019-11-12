@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body{
+  font-family: russo One;
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+/*<--   Header   --> */
+.uk-navbar{
+  background-color: grey;
+}
+
+header nav div.buscador{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+/*<--   Header   --> */
+
+p{
+  color: black;
+  font-family: "times new roman";
+  font-size: 12px;
+}
+
+.populares{
+  width: 500px
+}
+
+.uk-card-body{
+  padding: 5px;
+}

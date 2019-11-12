@@ -1,5 +1,5 @@
 window.onload = ()=>{
-  
+
   //Header
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
   .then(res => res.json())
@@ -48,10 +48,31 @@ window.onload = ()=>{
     var mas = data.homepage
     document.querySelector('#leerMas').innerHTML += '<a class="uk-button uk-button-text" href='+mas+'>Mas</a>'
     var puntaje = data.vote_average
-    document.querySelector('#puntaje').innerHTML += puntaje
+    document.querySelector('#puntaje').innerHTML += puntaje + "/10"
+    var ulEpisodio = data.last_episode_to_air.name
+    var fechaUlEpisodio = data.last_episode_to_air.air_date
+    document.querySelector('#ulEpisodio').innerHTML += ulEpisodio + " emitido el " + fechaUlEpisodio
+    var proxEpisodio = data.next_episode_to_air.name
+    var fechaProxEpisodio = data.next_episode_to_air.air_date
+    document.querySelector('#proxEpisodio').innerHTML += proxEpisodio + " el " + fechaProxEpisodio
+    var temporadas = data.number_of_seasons
+    document.querySelector('#temporadas').innerHTML += temporadas
+    var episodios = data.number_of_episodes
+    document.querySelector('#episodios').innerHTML += episodios
+
+
 })
-
-
-
+fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/videos?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US").then(res => res.json())
+.then(data => {
+var videoResults = data.results
+  console.log(videoResults);
+var videoNombre = ""
+var videoLink = ""
+for (var i = 0; i < videoResults.length; i++) {
+  videoNombre = videoResults[i].name
+  videoLink = videoResults[i].key
+  document.querySelector('#videosTodos').innerHTML += '<a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle><p id="videoNombre">'+ videoNombre +'</p></a><div id="modal-media-youtube" class="uk-flex-top" uk-modal><div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical"><button class="uk-modal-close-outside" type="button" uk-close></button><div id="videos"><iframe class="SameSite" src="https://www.youtube.com/watch?v='+ videoLink +'" width="500" height="281" frameborder="0" uk-video></iframe></div></div></div>'
+}
+})
 
 }

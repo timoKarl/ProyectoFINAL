@@ -18,7 +18,24 @@ header nav div.buscador{
   justify-content: flex-start;
   margin-left: 20px;
 }
+.login{
+  display: flex;
+  align-items: center;
+  margin-top: 29px;
+  margin-right: 15px;
+}
+
+.li-menu{
+display: flex;
+align-items: center;
+}
+
+.signup{
+  margin-top: 23px;
+  margin-right: 15px;
+}
 /*<--   Header   --> */
+
 
 p{
   color: black;
@@ -33,3 +50,29 @@ p{
 .uk-card-body{
   padding: 5px;
 }
+
+/*<--   Footer   --> */
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+img.logo{
+  max-width: 50px;
+  display: flex;
+  margin-right: 10px;
+  justify-content: flex-start;
+}
+
+p.firma{
+  color: black;
+  justify-content: flex-end;
+  font: "times new roman";
+  text-decoration: none;
+}
+
+.logoa:hover{
+  text-decoration: none;
+}
+
+/*<--   Footer   --> */

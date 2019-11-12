@@ -1,4 +1,20 @@
 window.onload = function(){
+
+  function Login(){
+  var done=0;
+  var usuario=document.login.usuario.value;
+  var password=document.login.password.value;
+  if (usuario=="USUARIO1" && password=="CONTRASEÑA1") {
+  window.localsStorage="TU_PAGINA_WEB.HTML";
+  }
+  if (usuario=="USUARIO2" && password=="CONTRASEÑA2") {
+  window.localStorage="TU_PAGINA_WEB.HTML";
+  }
+  if (usuario=="" && password=="") {
+  window.localStorage="errorpopup.html";
+  }
+  }
+
 //Header
 fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
 .then(res => res.json())
@@ -12,7 +28,26 @@ for (var i = 0; i < generos.length; i++) {
 }
   })
 //header
-
+//Registro
+function registro(){
+if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){
+        document.form.submit();
+    }
+    else{
+         alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
+    }
+}
+//Registro
+//log in
+function go(){
+if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){
+        document.form.submit();
+    }
+    else{
+         alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
+    }
+}
+//log in
 //populares
 fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())
@@ -27,18 +62,19 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
    var path = populares[i].poster_path
    var overview = populares[i].overview.substring(0,100)
    var valoracion = populares[i].vote_average
-  lipopulares += '<a href="detalle.html?id='+ populares[i].id +'"><li>'
-  lipopulares +=     '<div class="uk-card uk-card-default ">'
-  lipopulares +=         '<div class="uk-card-media-top">'
-  lipopulares +=             '<img class="populares" src='+ prepath + path +' alt="">'
-  lipopulares +=         '</div>'
-  lipopulares +=         '<div class="uk-card-body">'
-  lipopulares +=             '<h3 class="uk-card-title">'+  nombre +'</h3>'
-  lipopulares +=             '<p>'+ overview + '...' +'</p>'
-  lipopulares +=             '<p>Valoracion: '+ valoracion +'</p>'
-  lipopulares +=         '</div>'
-  lipopulares +=     '</div>'
-  lipopulares += '</li></a>'
+    lipopulares = '<a href="detalle.html?id='+ populares[i].id +'"><li>'
+    lipopulares +=     '<div class="uk-card uk-card-default ">'
+    lipopulares +=         '<div class="uk-card-media-top">'
+    lipopulares +=             '<img class="populares" src='+ prepath + path +' alt="">'
+    lipopulares +=         '</div>'
+    lipopulares +=         '<div class="uk-card-body">'
+    lipopulares +=             '<h3 class="uk-card-title">'+  nombre +'</h3>'
+    lipopulares +=             '<p>'+ overview + '...' +'</p>'
+    lipopulares +=             '<p>Valoracion: '+ valoracion +'</p>'
+    lipopulares +=         '</div>'
+    lipopulares +=     '</div>'
+    lipopulares += '</li></a>';
+    console.log(lipopulares);
     ulpopulares.innerHTML += lipopulares;
 }
 })
@@ -58,7 +94,7 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=87b4351691f0835cf822a9a
    var path = valoradas[i].poster_path
    var overview = valoradas[i].overview.substring(0,100)
    var valoracion = valoradas[i].vote_average
-  livaloradas += '<a href="detalle.html?id='+ valoradas[i].id +'"><li>'
+  livaloradas = '<a href="detalle.html?id='+ valoradas[i].id +'"><li>'
   livaloradas +=     '<div class="uk-card uk-card-default ">'
   livaloradas +=         '<div class="uk-card-media-top">'
   livaloradas +=             '<img class="valoradas" src='+ prepath + path +' alt="">'
@@ -89,7 +125,7 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=87b4351691f0835cf822
    var path = aire[i].poster_path
    var overview = aire[i].overview.substring(0,100)
    var valoracion = aire[i].vote_average
-  liaire += '<a href="detalle.html?id='+ aire[i].id +'"><li>'
+  liaire  = '<a href="detalle.html?id='+ aire[i].id +'"><li>'
   liaire +=     '<div class="uk-card uk-card-default ">'
   liaire +=         '<div class="uk-card-media-top">'
   liaire +=             '<img class="aire" src='+ prepath + path +' alt="">'

@@ -39,9 +39,9 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=f33095cc07bd4e913c0e2
   console.log(genreid[0])
   var prepath = "https://image.tmdb.org/t/p/original"
   var ulpopulares = document.getElementById("populares");
-  var lipopulares = ""
+  var lipopulares = "";
  for (var i = 0; i < populares.length; i++) {
-   var nombre = populares[i].name
+   var nombre = populares[i].title
    var path = populares[i].poster_path
    var overview = populares[i].overview.substring(0,100)
    var valoracion = populares[i].vote_average
@@ -59,9 +59,12 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=f33095cc07bd4e913c0e2
     lipopulares += '</li></a>';
     console.log(lipopulares);
     ulpopulares.innerHTML += lipopulares;
-    
+
 }
 })
 //populares
+
 }
+document.getElementById("genid").innerHTML = "Crime";
+
 /*Api key Bruno: f33095cc07bd4e913c0e2fdfc606109c*/

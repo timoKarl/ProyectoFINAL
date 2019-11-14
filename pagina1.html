@@ -17,6 +17,8 @@
       <header>
         <nav class="uk-navbar-container navMia" uk-navbar>
           <div class="buscador">
+            <a class="logoHeader" href="https://www.themoviedb.org/">
+            <img  class="logo" src="imagenes/tmdblogo.svg" alt=""></a>
             <form class="uk-search uk-search-default">
               <span uk-search-icon></span>
               <input class="uk-search-input buscar" type="search" placeholder="Buscar...">
@@ -33,15 +35,23 @@
                     </ul>
                 </div>
               </li>
-              <li class="li-menu"><a class="a-menu li-menu" href=pagina3.html>Favoritos</a></li>
-      </ul>
+              <li><a class="a-menu li-menu" href=pagina2.html>Secciones</a>
+                <div class="uk-navbar-dropdown">
+                    <ul id="listaGeneros" class="uk-nav uk-navbar-dropdown-nav">
+                      <li><a href="populares.html">Populares</a></li>
+                      <li><a href="valoradas.html">Mejor Valorados</a></li>
+                      <li><a href="alaire.html">Al aire ahora</a></li>
+                    </ul>
+                </div>
+              <li><a class="a-menu li-menu" href=pagina3.html>Favoritos</a></li>
+            </ul>
+
     </div>
-</nav>
+  </nav>
         </header>
 
   <!-- Header -->
-
-<h2>Populares</h2>
+<a href="populares.html"><h2>Populares</h2></a>
 
  <!-- Carrousel populares -->
  <div uk-slider="center: true">
@@ -61,8 +71,8 @@
 
  </div>
  <!-- Carrousel populares -->
-
-<h2>Mejor valoradas</h2>
+<a href="valoradas.html">
+<h2>Mejor valoradas</h2></a>
 
 <!-- Carrousel Valoradas -->
 <div uk-slider="center: true">
@@ -82,8 +92,8 @@
 
 </div>
 <!-- Carrousel Valoradas -->
-
-<h2>Al aire hoy</h2>
+<a href="alaire.html">
+<h2>Al aire hoy</h2></a>
 
  <!-- Carrousel Aire Hoy -->
  <div uk-slider="center: true">

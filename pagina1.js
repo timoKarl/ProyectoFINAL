@@ -27,27 +27,7 @@ for (var i = 0; i < generos.length; i++) {
   document.querySelector('#listaGeneros').innerHTML += '<li><a href=generos.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
 }
   })
-//header
-//Registro
-function registro(){
-if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){
-        document.form.submit();
-    }
-    else{
-         alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
-    }
-}
-//Registro
-//log in
-function go(){
-if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){
-        document.form.submit();
-    }
-    else{
-         alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
-    }
-}
-//log in
+  //header
 //populares
 fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())

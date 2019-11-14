@@ -1,11 +1,3 @@
-  @import url('https://fonts.googleapis.com/css?family=Russo+One');
-
-body{
-  font-family: russo One;
-  background-color: #f8f8f8;
-  width: 100%;
-}
-
 /*<--   Header   --> */
 
 header nav div.buscador{
@@ -22,25 +14,14 @@ a.logoHeader{
 
 /*<--   Header   --> */
 
-
-p{
-  color: black;
-  font-family: "times new roman";
-  font-size: 12px;
-}
-
-.populares{
-  width: 500px
-}
-
-.uk-card-body{
-  padding: 5px;
-}
-
 h2{
   display: flex;
   justify-content: center;
 }
+
+/* Lista */
+
+/* Lista */
 /*<--   Footer   --> */
 footer{
   display: flex;

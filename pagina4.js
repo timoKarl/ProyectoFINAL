@@ -13,6 +13,37 @@ for (var i = 0; i < generos.length; i++) {
 }
   })
 }
+
+fetch("https://api.themoviedb.org/3/discover/movie?api_key=f33095cc07bd4e913c0e2fdfc606109c&language=en-US")
+.then(res => res.json())
+.then(data => {
+  console.log(data.results);
+  var genclick = data.results;
+  var prepath = "https://image.tmdb.org/t/p/original"
+  var ulgenclick = document.getElementById("genclick");
+  var ligenclick = ""
+ for (var i = 0; i < genclick.length; i++) {
+   var nombre = genclick[i].name
+   var path = genclick[i].poster_path
+   var overview = genclick[i].overview.substring(0,100)
+   var valoracion = genclick[i].vote_average
+    ligenclick = '<a href="detalle.html?id='+ genclick[i].id +'"><li>'
+    ligenclick +=     '<div class="uk-card uk-card-default ">'
+    ligenclick +=         '<div class="uk-card-media-top">'
+    ligenclick +=             '<img class="genclick" src='+ prepath + path +' alt="">'
+    ligenclick +=         '</div>'
+    ligenclick +=         '<div class="uk-card-body">'
+    ligenclick +=             '<h3 class="uk-card-title">'+  nombre +'</h3>'
+    ligenclick +=             '<p>'+ overview + '...' +'</p>'
+    ligenclick +=             '<p>Valoracion: '+ valoracion +'</p>'
+    ligenclick +=         '</div>'
+    ligenclick +=     '</div>'
+    ligenclick += '</li></a>';
+    console.log(ligenclick);
+    ulgenclick.innerHTML += ligenclick;
+}
+})
+
 //header
 
 /*Api key Bruno: f33095cc07bd4e913c0e2fdfc606109c*/

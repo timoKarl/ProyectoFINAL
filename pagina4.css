@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
 
 body{
-  font-family: russo One;}
+  font-family: russo One;
+  background-color: #f8f8f8;
+  width: 100%;}
 
   /*<--   Header   --> */
   .uk-navbar{
@@ -46,6 +48,16 @@ article.genero img {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+article h1 a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.genclick {
+  width: 500px;
+}
+
 
 hello.world {
   position: absolute;

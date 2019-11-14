@@ -24,7 +24,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
  for (var i = 0; i < populares.length; i++) {
    var nombre = populares[i].name
    var path = populares[i].poster_path
-   var overview = populares[i].overview.substring(0,100)
+   var overview = populares[i].overview
    var valoracion = populares[i].vote_average
 
    trpopulares = '<tr>'

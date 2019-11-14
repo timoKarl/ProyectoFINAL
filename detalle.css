@@ -22,12 +22,16 @@ header nav div.buscador{
   margin-left: 20px;
 }
 
+a.logoHeader{
+  width: 20%;
+}
+
 /*<--   Header   --> */
 
 
 div.div1{
   align-items: flex-start;
-  width: 33.3%;
+  width: 28%;
 }
 
 article.art{
@@ -89,44 +93,48 @@ div.uk-first-column{
 #div1 img.img{
 }
 
-/*<--   Footer ARREGLARRRRRRRRRRRRR  --> */
+p.relacionados{
+  color: black;
+  font-family: "times new roman";
+  font-size: 12px;
+}
+
+.populares{
+  width: 500px
+}
+
+.uk-card-body{
+  padding: 5px;
+}
+
+div#videosTodos{
+  display: flex;
+  flex-direction: column;
+}
+
+/*<--   Footer   --> */
 footer{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: absolute;
-  bottom: 0px;
 }
 img.logo{
   max-width: 50px;
   display: flex;
   margin-right: 10px;
   justify-content: flex-start;
+  min-width: 50px;
 }
 
 p.firma{
   color: black;
   justify-content: flex-end;
-  font: "times new roman";
+  font-size: 10px;
   text-decoration: none;
-}
-
-a.logoa{
-width: 100%;
 }
 
 .logoa:hover{
   text-decoration: none;
-}
-
-div#articleArriba{
-  display: flex;
-  flex-direction: row;  
-}
-
-div#videosTodos{
-  display: flex;
-  flex-direction: column;
 }
 
 /*<--   Footer   --> */

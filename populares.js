@@ -1,3 +1,4 @@
+
 window.onload = function(){
   //Header
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
@@ -34,3 +35,26 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
 }
 })
 }
+/*probando infinite scroll
+var listElm = document.querySelector("#infinite-list");
+
+// Add 20 items.
+var nextItem = 1;
+var loadMore = function() {
+  for (var i = 0; i < 5; i++) {
+    var item = document.createElement("li");
+    item.innerText = "Item" + nextItem++;
+    listElm.appendChild(item);
+  }
+}
+
+// Detect when scrolled to bottom.
+listElm.addEventListener("scroll", function() {
+  if (listElm.scrollTop + listElm.clientHeight >= listElm.scrollHeight) {
+    loadMore();
+  }
+});
+
+// Initially load some items.
+loadMore();
+*/

@@ -43,6 +43,7 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
       document.getElementById('agregar-favoritos').innerHTML = 'Agregar a favoritos';
     }
   }
+  //document.getElementsByClassName('agregar-favoritos').addEventListener("click", function(e) { asi tendria que estar para favoritos
   document.getElementById("agregar-favoritos").addEventListener("click", function(e) {
     e.preventDefault();
     if (window.localStorage.getItem('fav') !== null) {

@@ -1,3 +1,15 @@
+// mostrasr / ocultar
+var x = document.getElementById("relacionadosdiv");
+x.style.display = "none";
+function mostrar() {
+  if (x.style.display = "none") {
+    x.style.display = "block"
+  }else {
+    x.style.display = "none"
+  }
+}
+//mostrar / ocultar
+
 window.onload = ()=>{
 
   //Header
@@ -65,6 +77,8 @@ window.onload = ()=>{
 
 
 })
+
+// Trailers
 fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/videos?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US").then(res => res.json())
 .then(data => {
 var videoResults = data.results
@@ -77,7 +91,7 @@ for (var i = 0; i < videoResults.length; i++) {
   document.querySelector('#videosTodos').innerHTML += '<a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle><p id="videoNombre">'+ videoNombre +'</p></a><div id="modal-media-youtube" class="uk-flex-top" uk-modal><div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical"><button class="uk-modal-close-outside" type="button" uk-close></button><div id="videos"><iframe class="SameSite" src="https://www.youtube.com/embed/'+ videoLink +'" width="500" height="281" frameborder="0" uk-video></iframe></div></div></div>'
 }
 })
-
+// Trailers
 // Favoritos2
 
 var idSerie2 = JSON.parse(idSerie)
@@ -91,7 +105,7 @@ document.getElementById("agregar-favoritos").addEventListener("click", function(
   e.preventDefault();
   if (window.localStorage.getItem('fav') !== null) {
     if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-      document.getElementById('agregar-favoritos').innerHTML = 'Agregar de favoritos'
+      document.getElementById('agregar-favoritos').innerHTML = 'Agregar a favoritos'
       // la serie esta en fav. la quito
       var fav1 = JSON.parse(window.localStorage.getItem('fav'))
       console.log(fav1);
@@ -119,6 +133,8 @@ document.getElementById("agregar-favoritos").addEventListener("click", function(
 // Favoritos2
 
 //relacionados
+
+
 fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/recommendations?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())
 .then(data => {

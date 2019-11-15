@@ -9,7 +9,7 @@
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-<script src="detalle.js"></script>
+
   </head>
   <body>
     <!--   Header   -->
@@ -92,8 +92,10 @@
 </div>
 
  <!-- Carrousel Relacionadas -->
- <h2>Programas Realacionados</h2>
- <div uk-slider="center: true">
+ <button class="uk-button uk-button-default" onclick="mostrar()">Ver Programas Realacionados</button>
+
+<div id="relacionadosdiv">
+  <div uk-slider="center: true">
 
      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
@@ -109,6 +111,7 @@
      <!-- <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
 
  </div>
+</div>
  <!-- Carrousel Relacionadas -->
 
 <!-- footer -->
@@ -121,6 +124,6 @@
 <!-- footer -->
 
 
-
+<script src="detalle.js"></script>
   </body>
 </html>

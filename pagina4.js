@@ -1,33 +1,17 @@
 window.onload = function(){
-
-  function Login(){
-  var done=0;
-  var usuario=document.login.usuario.value;
-  var password=document.login.password.value;
-  if (usuario=="USUARIO1" && password=="CONTRASEÑA1") {
-  window.localsStorage="TU_PAGINA_WEB.HTML";
+  //Header
+  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
+  .then(res => res.json())
+  .then(data => {
+  console.log(data);
+  var generos = data.genres
+  for (var i = 0; i < generos.length; i++) {
+    var nombre = generos[i].name
+    var idGenero = generos[i].id
+    document.querySelector('#listaGeneros').innerHTML += '<li><a href=seriesxgenero.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
   }
-  if (usuario=="USUARIO2" && password=="CONTRASEÑA2") {
-  window.localStorage="TU_PAGINA_WEB.HTML";
-  }
-  if (usuario=="" && password=="") {
-  window.localStorage="errorpopup.html";
-  }
-  }
-
-//Header
-fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
-.then(res => res.json())
-.then(data => {
-console.log(data);
-var generos = data.genres
-for (var i = 0; i < generos.length; i++) {
-  var nombre = generos[i].name
-  var idGenero = generos[i].id
-  document.querySelector('#listaGeneros').innerHTML += '<li><a href=generos.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
-}
-  })
-//header
+    })
+    //header
 
 //populares
 fetch("https://api.themoviedb.org/3/discover/movie?api_key=f33095cc07bd4e913c0e2fdfc606109c&language=en-US&with_genres=80")
@@ -59,7 +43,7 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=f33095cc07bd4e913c0e2
     lipopulares += '</li></a>';
     console.log(lipopulares);
     ulpopulares.innerHTML += lipopulares;
-    
+
 }
 })
 //populares

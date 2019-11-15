@@ -8,7 +8,7 @@ window.onload = function(){
   for (var i = 0; i < generos.length; i++) {
     var nombre = generos[i].name
     var idGenero = generos[i].id
-    document.querySelector('#listaGeneros').innerHTML += '<li><a href=generos.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
+    document.querySelector('#listaGeneros').innerHTML += '<li><a href=seriesxgenero.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
   }
     })
     //header

@@ -9,7 +9,7 @@
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="seriesxgenero.css">
   </head>
   <body>
 <div class="todo">
@@ -28,14 +28,14 @@
 
             <ul class="uk-navbar-nav">
               <li class="uk-active li-menu"><a class="a-menu" href=home.html>Home</a></li>
-              <li><a class="a-menu li-menu" href=generos.html>Generos</a>
+              <li><a class="a-menu li-menu" href=pagina2.html>Generos</a>
                 <div class="uk-navbar-dropdown">
                     <ul id="listaGeneros" class="uk-nav uk-navbar-dropdown-nav">
 
                     </ul>
                 </div>
               </li>
-              <li><a class="a-menu li-menu" href=home.html>Secciones</a>
+              <li><a class="a-menu li-menu" href=pagina2.html>Secciones</a>
                 <div class="uk-navbar-dropdown">
                     <ul id="listaGeneros" class="uk-nav uk-navbar-dropdown-nav">
                       <li><a href="populares.html">Populares</a></li>
@@ -51,35 +51,14 @@
         </header>
 
   <!-- Header -->
-<a href="populares.html"><h2>Populares</h2></a>
+<a href="populares.html"><h2 id="nombreGenero">Populares</h2></a>
 
- <!-- Carrousel populares -->
- <div uk-slider="center: true">
-
-     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-
-         <ul id="populares" class="uk-slider-items uk-child-width-1-2@s uk-grid populares">
-
-         </ul>
-
-         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
-     </div>
-
-     <!-- <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
-
- </div>
- <!-- Carrousel populares -->
-<a href="valoradas.html">
-<h2>Mejor valoradas</h2></a>
-
-<!-- Carrousel Valoradas -->
+<!-- Carrousel populares -->
 <div uk-slider="center: true">
 
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
-        <ul id="valoradas" class="uk-slider-items uk-child-width-1-2@s uk-grid populares">
+        <ul id="genero" class="uk-slider-items uk-child-width-1-2@s uk-grid populares">
 
         </ul>
 
@@ -91,28 +70,7 @@
     <!-- <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
 
 </div>
-<!-- Carrousel Valoradas -->
-<a href="alaire.html">
-<h2>Al aire hoy</h2></a>
-
- <!-- Carrousel Aire Hoy -->
- <div uk-slider="center: true">
-
-     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-
-         <ul id="aire" class="uk-slider-items uk-child-width-1-2@s uk-grid populares">
-
-         </ul>
-
-         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
-     </div>
-
-     <!-- <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
-
- </div>
- <!-- Carrousel Aire Hoy -->
+<!-- Carrousel populares -->
 
 <!-- footer -->
 <a class="logoa" href="https://www.themoviedb.org/">
@@ -125,6 +83,6 @@
 </div>
 
 
-<script type="text/javascript" src="home.js"></script>
+<script type="text/javascript" src="seriesxgenero.js"></script>
   </body>
 </html>

@@ -83,7 +83,7 @@ var idSerie2 = JSON.parse(idSerie)
 console.log(idSerie2);
 if (window.localStorage.getItem('fav') !== null) {
   if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-    document.getElementById('agregar-favoritos').innerHTML = 'eliminar de fav';
+    document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos';
   }
 }
 document.getElementById("agregar-favoritos").addEventListener("click", function(e) {
@@ -102,7 +102,7 @@ document.getElementById("agregar-favoritos").addEventListener("click", function(
       console.log("elimino de fav");
     }else {
       // no esta. asi que la agrego
-      document.getElementById('agregar-favoritos').innerHTML = 'eliminar de fav'
+      document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos'
     var fav = JSON.parse(window.localStorage.getItem('fav'))
     fav.push(idSerie2);
     console.log(fav);
@@ -121,7 +121,6 @@ document.getElementById("agregar-favoritos").addEventListener("click", function(
 fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/recommendations?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())
 .then(data => {
-  // console.log(data.results);
   var relacionados = data.results;
   var prepath = "https://image.tmdb.org/t/p/original"
   var ulrelacionados = document.getElementById("relacionados");

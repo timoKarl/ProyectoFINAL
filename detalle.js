@@ -4,14 +4,15 @@ window.onload = ()=>{
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
   .then(res => res.json())
   .then(data => {
+  console.log(data);
   var generos = data.genres
   for (var i = 0; i < generos.length; i++) {
     var nombre = generos[i].name
     var idGenero = generos[i].id
-    document.querySelector('#listaGeneros').innerHTML += '<li><a href=generos.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
+    document.querySelector('#listaGeneros').innerHTML += '<li><a href=seriesxgenero.html?id="'+ idGenero +'">'+ nombre +'</a></li>'
   }
     })
-  //header
+    //header
 
   var query = new URLSearchParams(location.search)
   if (query.has('id')){
@@ -67,7 +68,7 @@ window.onload = ()=>{
 fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/videos?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US").then(res => res.json())
 .then(data => {
 var videoResults = data.results
-  console.log(videoResults);
+  // console.log(videoResults);
 var videoNombre = ""
 var videoLink = ""
 for (var i = 0; i < videoResults.length; i++) {
@@ -79,32 +80,41 @@ for (var i = 0; i < videoResults.length; i++) {
 
 // Favoritos2
 
-document.getElementById("agregar-favoritos").addEventListener("click", function(e) {
-
-  // hacemos que no se ejecute el enlace
-  e.preventDefault();
-  fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US").then(res => res.json())
-  .then(data => {
-    var nombre = data.name;
-    var datosFav = {
-    id: idSerie,
-    nombre: nombre,
-  };
-  var posFav = JSON.parse(window.localStorage.getItem('fav'))
-  console.log(posFav);
-  if (posFav == null) {
-    document.querySelector('#textoFavoritos').innerHTML = "Agregar a favoritos"
-    document.getElementById("agregar-favoritos").addEventListener("click", function add(){
-    window.localStorage.setItem('fav', JSON.stringify(datosFav))
-  })
-    console.log(window.localStorage.getItem('fav'));
-  }else {
-    document.querySelector('#textoFavoritos').innerHTML = "Eliminar de favoritos"
-    document.getElementById("agregar-favoritos").addEventListener("click", function remove(){
-      window.localStorage.removeItem('fav' , datosFav)
-    })
+var idSerie2 = JSON.parse(idSerie)
+console.log(idSerie2);
+if (window.localStorage.getItem('fav') !== null) {
+  if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
+    document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos';
+  }
 }
-})
+document.getElementById("agregar-favoritos").addEventListener("click", function(e) {
+  e.preventDefault();
+  if (window.localStorage.getItem('fav') !== null) {
+    if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
+      document.getElementById('agregar-favoritos').innerHTML = 'Agregar de favoritos'
+      // la serie esta en fav. la quito
+      var fav1 = JSON.parse(window.localStorage.getItem('fav'))
+      console.log(fav1);
+      var index = fav1.indexOf(idSerie2);
+      if (index > -1) {
+        fav1.splice(index, 1);
+        window.localStorage.setItem('fav' , JSON.stringify(fav1))
+      }
+      console.log("elimino de fav");
+    }else {
+      // no esta. asi que la agrego
+      document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos'
+    var fav = JSON.parse(window.localStorage.getItem('fav'))
+    fav.push(idSerie2);
+    console.log(fav);
+    window.localStorage.setItem('fav', JSON.stringify(fav))
+    console.log("agrego a fav");
+    }
+  }else {
+    //aca llego si NO esta guardado fav en el local. entonces creo que array con la serie clickeada
+    console.log(idSerie2);
+  window.localStorage.setItem('fav', JSON.stringify([idSerie2]))
+}
 })
 // Favoritos2
 
@@ -112,7 +122,6 @@ document.getElementById("agregar-favoritos").addEventListener("click", function(
 fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/recommendations?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())
 .then(data => {
-  console.log(data.results);
   var relacionados = data.results;
   var prepath = "https://image.tmdb.org/t/p/original"
   var ulrelacionados = document.getElementById("relacionados");
@@ -134,10 +143,9 @@ fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/recommendations?api_key=87b
     lirelacionados +=         '</div>'
     lirelacionados +=     '</div>'
     lirelacionados += '</li></a>';
-    console.log(lirelacionados);
+    // console.log(lirelacionados);
     ulrelacionados.innerHTML += lirelacionados;
 }
 })
 //relacionados
-
 }

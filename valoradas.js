@@ -36,7 +36,7 @@ for (var i = 1; i < cantidadDePaginas; i++) {
        var valoracion = valoradas[i].vote_average
 
        trvaloradas = '<tr>'
-       trvaloradas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                                   <td class="uk-text-truncate">'+nombre+'</td>                                                 <td class="uk-table-link">                          <a class="uk-link-reset" href="detalle.html?id='+ valoradas[i].id+'">'+overview+'</a></td>                                                <td class="uk-text-nowrap">'+valoracion+'</td></tr>'
+       trvaloradas += '<td><img class="uk-preserve-width uk-border-circle lazyload" src="'+prepath+path+'" width="40" alt=""></td>                                                   <td class="uk-text-truncate">'+nombre+'</td>                                                 <td class="uk-table-link">                          <a class="uk-link-reset" href="detalle.html?id='+ valoradas[i].id+'">'+overview+'</a></td>                                                <td class="uk-text-nowrap">'+valoracion+'</td></tr>'
         console.log(trvaloradas);
         document.getElementById("tbvaloradas").innerHTML += trvaloradas;
       }

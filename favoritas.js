@@ -31,7 +31,7 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
        var overview = favoritas.overview
        var valoracion = favoritas.vote_average
        trfavoritas = '<tr>'
-       trfavoritas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                     <td class="uk-text-truncate">'+nombre+'</td>                                     <td class="uk-table-link">                                                       <a class="uk-link-reset" href="detalle.html?id='+ favoritas.id+'">'+overview+'</a></td>                                                                          <td class="uk-text-nowrap">'+valoracion+'</td><td class="uk-text-nowrap"><a href="#" id="agregar-favoritos'+i+'"><p id="textoFavoritos">Agregar a favoritos</p></a></td></tr>'
+       trfavoritas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                     <td class="uk-text-truncate">'+nombre+'</td>                                     <td class="uk-table-link">                                                       <a class="uk-link-reset" href="detalle.html?id='+ favoritas.id+'">'+overview+'</a></td>                                                                          <td class="uk-text-nowrap">'+valoracion+'</td><td class="uk-text-nowrap"><a href="#" id="agregar-favoritos"><p id="textoFavoritos">Agregar a favoritos</p></a></td></tr>'
         document.getElementById("tbfavoritas").innerHTML += trfavoritas;
 
         // Agregar/eliminar
@@ -39,14 +39,14 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
   console.log(idSerie2);
   if (window.localStorage.getItem('fav') !== null) {
     if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-      document.getElementById("'agregar-favoritos'+i").innerHTML = 'Eliminar de favoritos';
+      document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos';
     }
   }
-  document.getElementById('"agregar-favoritos"+i').addEventListener("click", function(e) {
+  document.getElementById("agregar-favoritos").addEventListener("click", function(e) {
     e.preventDefault();
     if (window.localStorage.getItem('fav') !== null) {
       if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-        document.getElementById("'agregar-favoritos'+i").innerHTML = 'Agregar de favoritos'
+        document.getElementById('agregar-favoritos').innerHTML = 'Agregar de favoritos'
         // la serie esta en fav. la quito
         var fav1 = JSON.parse(window.localStorage.getItem('fav'))
         console.log(fav1);
@@ -58,7 +58,7 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
         console.log("elimino de fav");
       }else {
         // no esta. asi que la agrego
-        document.getElementById("'agregar-favoritos'+i").innerHTML = 'Eliminar de favoritos'
+        document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos'
       var fav = JSON.parse(window.localStorage.getItem('fav'))
       fav.push(idSerie2);
       console.log(fav);

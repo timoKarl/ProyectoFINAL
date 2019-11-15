@@ -31,7 +31,7 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
        var overview = favoritas.overview
        var valoracion = favoritas.vote_average
        trfavoritas = '<tr>'
-       trfavoritas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                     <td class="uk-text-truncate">'+nombre+'</td>                                     <td class="uk-table-link">                                                       <a class="uk-link-reset" href="detalle.html?id='+ favoritas.id+'">'+overview+'</a></td>                                                                          <td class="uk-text-nowrap">'+valoracion+'</td><td class="uk-text-nowrap"><a href="#" id="agregar-favoritos"><p id="textoFavoritos">Agregar a favoritos</p></a></td></tr>'
+       trfavoritas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                     <td class="uk-text-truncate">'+nombre+'</td>                                     <td class="uk-table-link">                                                       <a class="uk-link-reset" href="detalle.html?id='+ favoritas.id+'">'+overview+'</a></td>                                                                          <td class="uk-text-nowrap">'+valoracion+'</td><td class="uk-text-nowrap"><a href="#" id="agregar-favoritos"><p id="textoFavoritos">Eliminar de favoritos</p></a></td></tr>'
         document.getElementById("tbfavoritas").innerHTML += trfavoritas;
 
         // Agregar/eliminar
@@ -39,7 +39,8 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
   console.log(idSerie2);
   if (window.localStorage.getItem('fav') !== null) {
     if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-      document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos';
+    }else {
+      document.getElementById('agregar-favoritos').innerHTML = 'Agregar a favoritos';
     }
   }
   document.getElementById("agregar-favoritos").addEventListener("click", function(e) {

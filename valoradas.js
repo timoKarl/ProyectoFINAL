@@ -21,7 +21,7 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=87b4351691f0835cf822a9a
   console.log(data);
   var cantidadDePaginas = data.total_pages;
 
-for (var i = 1; i < cantidadDePaginas; i++) {
+for (var i = 1; i < 5; i++) {
   fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page="+i)
   .then(res => res.json())
   .then(data => {

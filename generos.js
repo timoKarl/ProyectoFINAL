@@ -26,7 +26,6 @@ for (var i = 0; i < generos.length; i++) {
   var idGenero = generos[i].id
    trgeneros = '<tr>'
    trgeneros += '<td class="uk-table-link"><a class="uk-link-reset" href="seriesxgenero.html?id='+ idGenero+'">'+nombreGenero+'</a></td></tr>'
-    console.log(trgeneros);
     document.getElementById("tbgeneros").innerHTML += trgeneros;
         }
   })

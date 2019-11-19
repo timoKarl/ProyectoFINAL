@@ -30,50 +30,30 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
        var path = favoritas.poster_path
        var overview = favoritas.overview
        var valoracion = favoritas.vote_average
+
+
        trfavoritas = '<tr>'
-       trfavoritas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                     <td class="uk-text-truncate">'+nombre+'</td>                                     <td class="uk-table-link">                                                       <a class="uk-link-reset" href="detalle.html?id='+ favoritas.id+'">'+overview+'</a></td>                                                                          <td class="uk-text-nowrap">'+valoracion+'</td><td class="uk-text-nowrap"><a href="#" id="agregar-favoritos"><p id="textoFavoritos">Eliminar de favoritos</p></a></td></tr>'
+       trfavoritas += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td><td class="uk-text-truncate">'+ nombre +'</td><td class="uk-table-link"><a class="uk-link-reset" href="detalle.html?id='+ idSerie +'">'+overview+'</a></td><td id="idSerie'+i+'" class="uk-text-nowrap">'+idSerie+'</td><td class="uk-text-nowrap"><p id="textoFavoritos'+i+'">Quitar</p></td></tr>'
         document.getElementById("tbfavoritas").innerHTML += trfavoritas;
 
-        // Agregar/eliminar
-  var idSerie2 = JSON.parse(idSerie)
-  console.log(idSerie2);
-  if (window.localStorage.getItem('fav') !== null) {
-    if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-    }else {
-      document.getElementById('agregar-favoritos').innerHTML = 'Agregar a favoritos';
-    }
-  }
-  //document.getElementsByClassName('agregar-favoritos').addEventListener("click", function(e) { asi tendria que estar para favoritos
-  document.getElementById("agregar-favoritos").addEventListener("click", function(e) {
-    e.preventDefault();
-    if (window.localStorage.getItem('fav') !== null) {
-      if (JSON.parse(window.localStorage.getItem('fav')).indexOf(idSerie2) != -1) {
-        document.getElementById('agregar-favoritos').innerHTML = 'Agregar de favoritos'
-        // la serie esta en fav. la quito
-        var fav1 = JSON.parse(window.localStorage.getItem('fav'))
-        console.log(fav1);
-        var index = fav1.indexOf(idSerie2);
-        if (index > -1) {
-          fav1.splice(index, 1);
-          window.localStorage.setItem('fav' , JSON.stringify(fav1))
-        }
-        console.log("elimino de fav");
-      }else {
-        // no esta. asi que la agrego
-        document.getElementById('agregar-favoritos').innerHTML = 'Eliminar de favoritos'
-      var fav = JSON.parse(window.localStorage.getItem('fav'))
-      fav.push(idSerie2);
-      console.log(fav);
-      window.localStorage.setItem('fav', JSON.stringify(fav))
-      console.log("agrego a fav");
-      }
-    }else {
-      //aca llego si NO esta guardado fav en el local. entonces creo que array con la serie clickeada
-      console.log(idSerie2);
-    window.localStorage.setItem('fav', JSON.stringify([idSerie2]))
-  }
-  })
+
+        var fav = JSON.parse(window.localStorage.getItem('fav'))
+        for (var i = 0; i < fav.length; i++) {
+          // Agregar/eliminar
+          document.getElementById("textoFavoritos"+i).addEventListener("click",  function eliminarDeFav(){
+            // la serie eszta en fav. la quito
+            console.log(fav);
+            var idSerie = document.getElementById('idSerie'+i)
+            var index = fav.indexOf(idSerie);
+            fav.splice(index, 1);
+            window.localStorage.setItem('fav' , JSON.stringify(fav))
+            console.log("elimino de fav");
+          })
+
+}
 })
 }
+  //Agregar/eliminar
+
 
 }

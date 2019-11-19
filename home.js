@@ -38,7 +38,6 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
     lipopulares +=         '</div>'
     lipopulares +=     '</div>'
     lipopulares += '</li></a>';
-    console.log(lipopulares);
     ulpopulares.innerHTML += lipopulares;
 }
 })

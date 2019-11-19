@@ -5,11 +5,12 @@
     <title></title>
     <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+<link rel="stylesheet" href="seriesxgenero.css">
 
 <!-- UIkit JS -->
+<script type="text/javascript" src="seriesxgenero.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-<link rel="stylesheet" href="seriesxgenero.css">
   </head>
   <body>
 <div class="todo">
@@ -51,7 +52,28 @@
         </header>
 
   <!-- Header -->
-<a href="populares.html"><h2 id="nombreGenero">Populares</h2></a>
+  <form>
+
+      <div class="uk-margin">
+      <div uk-form-custom="target: > * > span:first-child">
+          <select id="orden" onchange="orden1()">
+              <option value="">Ordenar por:</option>
+              <option value="1">Popularidad Descendente</option>
+              <option value="2">Popularidad Ascendente</option>
+              <option value="3">Valoracion Descendente</option>
+              <option value="4">Valoracion Ascendente</option>
+              <option value="5">Primer dia al aire Descendente</option>
+              <option value="6">Primer dia al aire Ascendente</option>
+          </select>
+          <button class="uk-button uk-button-default" type="button" tabindex="-1">
+              <span></span>
+              <span uk-icon="icon: chevron-down"></span>
+          </button>
+      </div>
+  </div>
+
+</form>
+<h2 id="nombreGenero">Populares</h2>
 
 <!-- Carrousel populares -->
 <div uk-slider="center: true">
@@ -83,6 +105,5 @@
 </div>
 
 
-<script type="text/javascript" src="seriesxgenero.js"></script>
   </body>
 </html>

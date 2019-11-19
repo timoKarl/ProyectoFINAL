@@ -41,7 +41,7 @@ window.onload = ()=>{
     for (var i = 0; i < generos.length; i++) {
       var xGenero = generos[i].name
       var idGenero = generos[i].id
-      pGeneros.innerHTML += "<a href='generos.html?id=" + idGenero + "'>" + xGenero + ",  </a>";
+      pGeneros.innerHTML += "<a href='seriesxgenero.html?id=" + idGenero + "'>" + xGenero + ",  </a>";
     }
     document.querySelector('#div1').innerHTML += '<img class="img" src="'+ prepath + path +'" alt="">'
     document.querySelector('#titulo').innerHTML =  nombre;
@@ -133,8 +133,6 @@ document.getElementById("agregar-favoritos").addEventListener("click", function(
 // Favoritos2
 
 //relacionados
-
-
 fetch("https://api.themoviedb.org/3/tv/"+ idSerie +"/recommendations?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
 .then(res => res.json())
 .then(data => {

@@ -24,13 +24,14 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
   var prepath = "https://image.tmdb.org/t/p/original"
   var trpopulares = ""
  for (var i = 0; i < populares.length; i++) {
-   var nombre = populares[i].name
-   var path = populares[i].poster_path
-   var overview = populares[i].overview
-   var valoracion = populares[i].vote_average
+     var nombre = populares[i].name
+     var path = populares[i].poster_path
+     var overview = populares[i].overview
+     var valoracion = populares[i].vote_average
 
-   trpopulares = '<tr>'
-   trpopulares += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                                   <td class="uk-text-truncate">'+nombre+'</td>                                                 <td class="uk-table-link">                          <a class="uk-link-reset" href="detalle.html?id='+ populares[i].id+'">'+overview+'</a></td>                                                <td class="uk-text-nowrap">'+valoracion+'</td></tr>'
+     trpopulares = '<tr>'
+     trpopulares += '<td><img class="uk-preserve-width uk-border-circle" src="'+prepath+path+'" width="40" alt=""></td>                                                   <td class="uk-text-truncate">'+nombre+'</td>                                                 <td class="uk-table-link">                          <a class="uk-link-reset" href="detalle.html?id='+ populares[i].id+'">'+overview+'</a></td>                                                <td class="uk-text-nowrap">'+valoracion+'</td></tr>'
+
     document.getElementById("tbpopulares").innerHTML += trpopulares;
 }
 })

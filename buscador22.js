@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
   var input = document.querySelector(".uk-search-input")
   input.setAttribute("value", busqueda)
 
-document.getElementById('busqueda').innerHTML = busqueda
+document.getElementById('busqueda').innerHTML = "Tu busqueda es: "+busqueda
 
     var page = 1;
     var url = "https://api.themoviedb.org/3/search/tv?api_key=7246c48f98d8db92d443b21af0633a14&language=en-US&query=" + busqueda + '&page=1'
@@ -17,6 +17,7 @@ document.getElementById('busqueda').innerHTML = busqueda
     .then(data => {
         console.log(data);
         var buscador = data.results;
+        console.log(data.total_pages);
         var prepath = "https://image.tmdb.org/t/p/original"
         var ulbuscador = document.getElementById("resultados");
         var libuscador = ""
@@ -29,6 +30,10 @@ document.getElementById('busqueda').innerHTML = busqueda
          }
          var overview = buscador[i].overview.substring(0,100)
          var valoracion = buscador[i].vote_average
+         var sinResultados = document.getElementById('sinResultados')
+         if (data.total_pages === 0) {
+           sinResultados.innerHTML = "No se encontraron resultados para la busqueda"
+         }else {
           libuscador = '<a href="detalle.html?id='+ buscador[i].id +'"><li>'
           libuscador +=     '<div class="uk-card uk-card-default ">'
           libuscador +=         '<div class="uk-card-media-top">'
@@ -42,6 +47,7 @@ document.getElementById('busqueda').innerHTML = busqueda
           libuscador +=     '</div>'
           libuscador += '</li></a>';
           ulbuscador.innerHTML += libuscador;
+        }
       }
     })
     })

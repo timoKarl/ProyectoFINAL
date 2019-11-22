@@ -56,6 +56,8 @@ window.onload = ()=>{
       idiomaOriginal = "Japones"
     } else if (idiomaOriginal=="es") {
       idiomaOriginal = "Español"
+    }else if (idiomaOriginal=="nl") {
+      idiomaOriginal = "Holandes"
     }
     document.querySelector('#idioma').innerHTML += idiomaOriginal
     var sinopsis = data.overview

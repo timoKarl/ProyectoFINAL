@@ -64,3 +64,10 @@ p.firma{
 .logoa:hover{
   text-decoration: none;
 }
+
+/* @media (max-width: 480px) {
+header nav.menucel div div div div ul{
+  display: flex;
+  flex-direction: column;
+} */
+}

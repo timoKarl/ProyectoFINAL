@@ -16,10 +16,10 @@
   <body>
     <!--   Header   -->
         <header>
-              <a class="logoHeader" href="#">
+              <a class="logoHeader" href="https://www.themoviedb.org/">
           <nav class="uk-navbar-container navMia uk-visible@m .uk-flex-right" uk-navbar>
             <div class="buscador">
-              <img  class="logo" src="img/logo2.jpg" alt=""></a>
+              <img  class="logo" src="img/tmdblogo.svg" alt=""></a>
             <div class="container_buscador">
               <form class="uk-search uk-search-navbar" action="resultados22.html" method="get">
                 <span uk-search-icon></span>
@@ -46,12 +46,14 @@
                       </ul>
                   </div>
                 <li><a class="a-menu li-menu" href=favoritas.html>Favoritos</a></li>
+                <li><a class="a-menu li-menu" href=buscadorAvanzado.html>buscador Avanzado</a></li>
               </ul>
 
       </div>
     </nav>
   <!-- Menu desplegable -->
     <nav class="uk-navbar uk-navbar-container uk-margin menucel uk-hidden@m">
+
         <div class="uk-navbar-left">
             <a class="uk-navbar-toggle uk-button uk-button-default"  uk-toggle="target: #offcanvas-overlay">
                 <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
@@ -74,6 +76,12 @@
                           </div>
                         </li>
                         <li><a class="a-menu li-menu" href=favoritas.html>Favoritos</a></li>
+                      </li>
+                      <li><a class="a-menu li-menu" href=buscadorAvanzado.html>Buscador Avanzado</a></li>
+                      <li><form class="uk-search uk-search-navbar" action="resultados22.html" method="get">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Buscar..." name="busqueda">
+                      </form></li>
                       </ul>
               </div>
 

@@ -45,12 +45,14 @@
                       </ul>
                   </div>
                 <li><a class="a-menu li-menu" href=favoritas.html>Favoritos</a></li>
+                <li><a class="a-menu li-menu" href=buscadorAvanzado.html>buscador Avanzado</a></li>
               </ul>
 
       </div>
     </nav>
   <!-- Menu desplegable -->
     <nav class="uk-navbar uk-navbar-container uk-margin menucel uk-hidden@m">
+
         <div class="uk-navbar-left">
             <a class="uk-navbar-toggle uk-button uk-button-default"  uk-toggle="target: #offcanvas-overlay">
                 <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
@@ -73,6 +75,12 @@
                           </div>
                         </li>
                         <li><a class="a-menu li-menu" href=favoritas.html>Favoritos</a></li>
+                      </li>
+                      <li><a class="a-menu li-menu" href=buscadorAvanzado.html>Buscador Avanzado</a></li>
+                      <li><form class="uk-search uk-search-navbar" action="resultados22.html" method="get">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Buscar..." name="busqueda">
+                      </form></li>
                       </ul>
               </div>
 
@@ -93,11 +101,29 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">Busqueda:</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Su busqueda">
+                <input class="uk-input" id="keyWords" type="text" placeholder="Su busqueda" form="avanzado" name="keyWords" required>
             </div>
         </div>
         <input type="submit">
       </form>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Estreno:</label>
+            <div class="uk-form-controls">
+        <input class="uk-input uk-form-width-small" type="number" min="1500" max="2019" step="1" value="2019" form="avanzado" name="estreno"/>
+      </div>
+    </div>
+
+        <div class="uk-margin">
+          <div class="uk-form-label">Radio</div>
+          <div class="uk-form-controls uk-form-controls-text" form="avanzado">
+            <label><input class="uk-radio" type="radio" value="PopularidadAscendente" name="orden"> Popularidad Ascendente</label><br>
+            <label><input class="uk-radio" type="radio" value="ValoracionDescendente" name="orden"> Valoracion Descendente</label><br>
+            <label><input class="uk-radio" type="radio" value="ValoracionAscendente" name="orden"> Valoracion Ascendente</label><br>
+            <label><input class="uk-radio" type="radio" value="FechaDescendente" name="orden"> Fecha Descendente</label><br>
+            <label><input class="uk-radio" type="radio" value="FechaAscendente" name="orden"> Fecha Ascendente</label><br>
+          </div>
+        </div>
 
         <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-select">Con genero:</label>
@@ -117,7 +143,30 @@
             </div>
         </div>
 
+        <input type="submit">
+      </form>
+<!-- FORM -->
+<div id="mensaje" class="uk-text-large">
 
+</div>
+<!-- Lista -->
+<div id="lista" class="uk-overflow-auto">
+    <table class="uk-table uk-table-hover uk-table-middle uk-table-divider" ><!--id="infinite-list"-->
+        <thead>
+            <tr>
+                <th class="uk-table-shrink">Foto</th>
+                <th class="uk-table-expand">Nombre</th>
+                <th class="uk-table-expand">Sinopsis</th>
+                <th class="uk-table-shrink uk-text-nowrap">Valoracion</th>
+            </tr>
+        </thead>
+        <tbody id="tbresultados1">
+
+        </tbody>
+    </table>
+</div>
+<div class="uk-child-width-1-2@s" uk-grid>
+<!-- Lista -->
 
     <!-- footer -->
     <a class="logoa" href="https://www.themoviedb.org/">

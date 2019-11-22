@@ -95,15 +95,5 @@ document.getElementById('busqueda').innerHTML = "Tu busqueda es: "+busqueda
 //       page++
 //       vermas()
 //     }
-//
 //   }
-//
-//
-//
-//
-//
-//
-//
-//
-//
 // });

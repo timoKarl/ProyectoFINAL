@@ -98,14 +98,6 @@
 
     <form id="avanzado" class="uk-form-horizontal uk-margin-large" action="buscadorAvanzado.html" method="get">
 
-        <div class="uk-margin">
-            <label class="uk-form-label" for="form-horizontal-text">Busqueda:</label>
-            <div class="uk-form-controls">
-                <input class="uk-input" id="keyWords" type="text" placeholder="Su busqueda" form="avanzado" name="keyWords" required>
-            </div>
-        </div>
-        <input type="submit">
-      </form>
 
         <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">Estreno:</label>
@@ -115,13 +107,14 @@
     </div>
 
         <div class="uk-margin">
-          <div class="uk-form-label">Radio</div>
+          <div class="uk-form-label">Orden</div>
           <div class="uk-form-controls uk-form-controls-text" form="avanzado">
-            <label><input class="uk-radio" type="radio" value="PopularidadAscendente" name="orden"> Popularidad Ascendente</label><br>
-            <label><input class="uk-radio" type="radio" value="ValoracionDescendente" name="orden"> Valoracion Descendente</label><br>
-            <label><input class="uk-radio" type="radio" value="ValoracionAscendente" name="orden"> Valoracion Ascendente</label><br>
-            <label><input class="uk-radio" type="radio" value="FechaDescendente" name="orden"> Fecha Descendente</label><br>
-            <label><input class="uk-radio" type="radio" value="FechaAscendente" name="orden"> Fecha Ascendente</label><br>
+            <label><input class="uk-radio" type="radio" value="popularidadDescendente" name="orden" checked> Popularidad Descendente</label><br>
+            <label><input class="uk-radio" type="radio" value="popularidadAscendente" name="orden"> Popularidad Ascendente</label><br>
+            <label><input class="uk-radio" type="radio" value="valoracionDescendente" name="orden"> Valoracion Descendente</label><br>
+            <label><input class="uk-radio" type="radio" value="valoracionAscendente" name="orden"> Valoracion Ascendente</label><br>
+            <label><input class="uk-radio" type="radio" value="fechaDescendente" name="orden"> Fecha Descendente</label><br>
+            <label><input class="uk-radio" type="radio" value="fechaAscendente" name="orden"> Fecha Ascendente</label><br>
           </div>
         </div>
 
@@ -129,7 +122,7 @@
             <label class="uk-form-label" for="form-horizontal-select">Con genero:</label>
             <div class="uk-form-controls">
                 <select id="listaGenerosCon" class="uk-select" name="conGenero" form="avanzado">
-                    <option>Seleccione un genero</option>
+                    <option value="genero">genero</option>
                 </select>
             </div>
         </div>
@@ -138,13 +131,12 @@
             <label class="uk-form-label" for="form-horizontal-select">Sin genero:</label>
             <div class="uk-form-controls">
                 <select id="listaGenerosSin" class="uk-select" name="sinGenero" form="avanzado">
-                    <option>Seleccione un genero</option>
+                    <option value="genero">genero</option>
                 </select>
             </div>
         </div>
-
-        <input type="submit">
-      </form>
+      <input type="submit">
+    </form>
 <!-- FORM -->
 <div id="mensaje" class="uk-text-large">
 

@@ -19,7 +19,6 @@ window.onload = function(){
   idGener0 = JSON.parse(idGenero)
   console.log(idGener0);
 //genero
-// var orden = "popularity.desc"
 //
 // document.getElementById("orden").addEventListener("change", orden1());
 
@@ -48,6 +47,7 @@ window.onload = function(){
 //   }
 // }
 // }
+var orden = "popularity.desc"
 fetch("https://api.themoviedb.org/3/discover/tv?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&sort_by="+orden+"&page=1&with_genres="+idGener0)
 .then(res => res.json())
 .then(data => {

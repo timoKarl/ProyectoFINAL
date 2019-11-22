@@ -28,6 +28,10 @@ fetch("https://api.themoviedb.org/3/tv/"+fav[i]+"?api_key=87b4351691f0835cf822a9
        var nombre = favoritas.name
        var idSerie = favoritas.id
        var path = favoritas.poster_path
+       if (path == null) {
+         prepath = ""
+         path = "img/notfound.jpg"
+       }
        var overview = favoritas.overview
        var valoracion = favoritas.vote_average
 

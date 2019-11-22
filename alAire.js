@@ -25,6 +25,10 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=87b4351691f0835cf822
  for (var i = 0; i < alaire.length; i++) {
    var nombre = alaire[i].name
    var path = alaire[i].poster_path
+   if (path == null) {
+     prepath = ""
+     path = "img/notfound.jpg"
+   }
    var overview = alaire[i].overview
    var valoracion = alaire[i].vote_average
 

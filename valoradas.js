@@ -26,6 +26,10 @@ for (var i = 1; i < 5; i++) {
       for (var i = 0; i < 21; i++) {
        var nombre = valoradas[i].name
        var path = valoradas[i].poster_path
+       if (path == null) {
+         prepath = ""
+         path = "img/notfound.jpg"
+       }
        var overview = valoradas[i].overview
        var valoracion = valoradas[i].vote_average
        trvaloradas = '<tr>'

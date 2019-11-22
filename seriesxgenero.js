@@ -19,35 +19,35 @@ window.onload = function(){
   idGener0 = JSON.parse(idGenero)
   console.log(idGener0);
 //genero
-var orden = "popularity.desc"
+// var orden = "popularity.desc"
+//
+// document.getElementById("orden").addEventListener("change", orden1());
 
-document.getElementById("orden").addEventListener("change", orden1());
-
-function orden1() {
-if (document.getElementById('orden').value=="1") {
-  orden = "popularity.desc"
-}else {
-  if (document.getElementById('orden').value=="2") {
-    orden = "popularity.asc"
-  }else {
-    if (document.getElementById('orden').value=="3") {
-      orden = "vote_average.desc"
-    }else {
-      if (document.getElementById('orden').value=="4") {
-        orden = "vote_average.asc"
-      }else {
-        if (document.getElementById('orden').value=="5") {
-          orden = "first_air_date.desc"
-        }else {
-          if (document.getElementById('orden').value=="6") {
-            orden = "first_air_date.asc"
-          }
-        }
-      }
-    }
-  }
-}
-}
+// function orden1() {
+// if (document.getElementById('orden').value=="1") {
+//   orden = "popularity.desc"
+// }else {
+//   if (document.getElementById('orden').value=="2") {
+//     orden = "popularity.asc"
+//   }else {
+//     if (document.getElementById('orden').value=="3") {
+//       orden = "vote_average.desc"
+//     }else {
+//       if (document.getElementById('orden').value=="4") {
+//         orden = "vote_average.asc"
+//       }else {
+//         if (document.getElementById('orden').value=="5") {
+//           orden = "first_air_date.desc"
+//         }else {
+//           if (document.getElementById('orden').value=="6") {
+//             orden = "first_air_date.asc"
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// }
 fetch("https://api.themoviedb.org/3/discover/tv?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&sort_by="+orden+"&page=1&with_genres="+idGener0)
 .then(res => res.json())
 .then(data => {
@@ -59,6 +59,10 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=87b4351691f0835cf822a9ad
  for (var i = 0; i < genero.length; i++) {
    var nombre = genero[i].name
    var path = genero[i].poster_path
+   if (path == null) {
+     prepath = ""
+     path = "img/notfound.jpg"
+   }
    var overview = genero[i].overview.substring(0,100)
    var valoracion = genero[i].vote_average
     ligenero = '<a href="detalle.html?id='+ genero[i].id +'"><li>'

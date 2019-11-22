@@ -36,6 +36,10 @@ window.onload = ()=>{
     var nombre = data.name;
     var prepath = "https://image.tmdb.org/t/p/original"
     var path = data.poster_path
+    if (path == null) {
+      prepath = ""
+      path = "img/notfound.jpg"
+    }
     var generos = data.genres
     var pGeneros = document.querySelector('#generos')
     for (var i = 0; i < generos.length; i++) {

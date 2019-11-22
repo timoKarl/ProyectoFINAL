@@ -24,6 +24,10 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=87b4351691f0835cf822a9ad5
  for (var i = 0; i < populares.length; i++) {
    var nombre = populares[i].name
    var path = populares[i].poster_path
+   if (path == null) {
+     prepath = ""
+     path = "img/notfound.jpg"
+   }
    var overview = populares[i].overview.substring(0,100)
    var valoracion = populares[i].vote_average
     lipopulares = '<a href="detalle.html?id='+ populares[i].id +'"><li>'
@@ -55,6 +59,10 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=87b4351691f0835cf822a9a
  for (var i = 0; i < valoradas.length; i++) {
    var nombre = valoradas[i].name
    var path = valoradas[i].poster_path
+   if (path == null) {
+     prepath = ""
+     path = "img/notfound.jpg"
+   }
    var overview = valoradas[i].overview.substring(0,100)
    var valoracion = valoradas[i].vote_average
   livaloradas = '<a href="detalle.html?id='+ valoradas[i].id +'"><li>'
@@ -86,6 +94,10 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=87b4351691f0835cf822
  for (var i = 0; i < aire.length; i++) {
    var nombre = aire[i].name
    var path = aire[i].poster_path
+   if (path == null) {
+     prepath = ""
+     path = "img/notfound.jpg"
+   }
    var overview = aire[i].overview.substring(0,100)
    var valoracion = aire[i].vote_average
   liaire  = '<a href="detalle.html?id='+ aire[i].id +'"><li>'
